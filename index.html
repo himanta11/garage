@@ -3,10 +3,10 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>JIYAN MARUTI MOTOR WORKS | Precision Engineering</title>
+<title>JIYAN MARUTI MOTOR WORKS</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -14,347 +14,362 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0062ff",
-                        "background-light": "#f5f6f8",
-                        "background-dark": "#0f1723",
-                        "slate-custom": "#1e293b",
-                        "charcoal-custom": "#020617"
+                        "primary": "#ff6600",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#1a1a1a",
+                        "charcoal": "#121212",
+                        "metallic": "#94a3b8"
                     },
                     fontFamily: {
                         "display": ["Space Grotesk", "sans-serif"]
                     },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
                 },
             },
         }
     </script>
 <style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #0f1723;
-            color: #ffffff;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .metallic-gradient {
+            background: linear-gradient(135deg, #94a3b8 0%, #475569 100%);
         }
     </style>
+    <script>
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                closeBookingModal();
+            }
+        }
+    </script>
 </head>
-<body>
-    <img src="cat.webp" alt="Cat Image" style="max-width: 100%; height: auto;">
-    <div class="relative flex min-h-screen w-full flex-col">
-<!-- Navigation -->
-<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+<div class="mx-auto flex max-w-7xl items-center justify-between">
 <div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
-<h2 class="text-xl font-bold tracking-tight uppercase tracking-widest">JIYAN MARUTI</h2>
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-white uppercase">JIYAN MARUTI MOTOR WORKS</h2>
 </div>
 <nav class="hidden md:flex items-center gap-10">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Expertise</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Why Us</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-slate-300 hover:text-primary transition-colors" href="#">Contact</a>
 </nav>
-<div class="flex items-center gap-4">
-<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all">
-                        Book Now
-                    </button>
-</div>
+<button class="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20" onclick="openBookingModal()">
+                    Book Now
+                </button>
 </div>
 </header>
-<!-- Hero Section -->
-<section class="relative w-full h-[85vh] flex items-center overflow-hidden">
+<main class="flex-1">
+<section class="relative h-[85vh] w-full flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-charcoal-custom via-charcoal-custom/60 to-transparent z-10"></div>
-<img alt="Hero Car" class="w-full h-full object-cover object-center" data-alt="Sleek black sports car in a dimly lit studio with electric blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE-IkKNSpvmr7I-Iw_U6dH0ztnNNmKMmK-oK8M7OwZ8GfZVWXeIuEki7i6puSxjw9XimlJcE9s5W-sdVfKsXWzQjZYmD2CqyO2GClH5aUYW-9pBFrwRTeh49FM6Q3nS4_tpHlq01FfNaZW54jRH621uoj-4cIYt4IlvQnBESW5E4XxjvIFOJrtf-vDpkuYaJ5IYOjYwxy2aN_uJcTeymIB6KQX9jq_oR7geYx0hF4mk5jiivYXkuTuYKWsA6HocgrmpODoEedTYxM"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/60 to-transparent z-10"></div>
+<img alt="Luxury car in tech workshop" class="h-full w-full object-cover" data-alt="Luxury sports car in high-tech modern automotive workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4iCU8oP_Q8gTKAPAQ0hgFfeBxcNoLm0xvyQ_wbk_guUPnrB9cA8-iSFcVuU9v4O8_sqIb9rJt_Hk99OutE1Uxk-clY0mhSTMkMzetJGWdlqF6BNMzQPH4VjVc5wBBv-3l_DotgHWs_2jDDqNPvPdaf8y-2_9MPUMcFj2A4AeyZZxqO8Ul4XmKDin3UIqMUVDSc8A3xCZC5BRA_ej0d_feMpIg2cFQc7ieumwa5h68NIMolM_3_FITnBIieCF2OgQkEGWZxE2ofe4"/>
 </div>
-<div class="relative z-20 max-w-7xl mx-auto px-6 w-full">
+<div class="relative z-20 mx-auto max-w-7xl px-6 lg:px-20 w-full">
 <div class="max-w-2xl">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6">
 <span class="relative flex h-2 w-2">
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
 </span>
-                        Elite Automotive Standards
-                    </div>
-<h1 class="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 tracking-tight">
-                        Precision Engineering <br/>
-<span class="text-primary">for the Modern Driver</span>
+                            Elite Performance Center
+                        </div>
+<h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] text-white mb-6">
+                            Precision Engineering. <br/><span class="text-primary italic">Total Trust.</span>
 </h1>
-<p class="text-lg text-slate-400 mb-10 max-w-lg">
-                        Experience high-end automotive care with state-of-the-art technology and master craftsmanship tailored for performance luxury.
-                    </p>
+<p class="text-lg text-slate-300 mb-10 max-w-lg leading-relaxed">
+                            Experience the pinnacle of luxury automotive care. Our master technicians utilize aerospace-grade diagnostics for your vehicle.
+                        </p>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold transition-all flex items-center gap-2">
-                            Book a Service <span class="material-symbols-outlined text-sm">calendar_today</span>
+<button class="bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all flex items-center gap-2 group" onclick="openBookingModal()">
+                                Book Service
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </button>
-<button class="bg-slate-800/50 hover:bg-slate-800 text-white border border-slate-700 px-8 py-4 rounded-lg font-bold transition-all">
-                            View Our Expertise
-                        </button>
-</div>
-</div>
-</div>
-</section>
-<!-- Stats Strip -->
-<section class="bg-slate-custom dark:bg-charcoal-custom border-y border-slate-800">
-<div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
-<div class="flex items-center gap-4 group">
-<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
-<span class="material-symbols-outlined">verified</span>
-</div>
-<div>
-<p class="text-2xl font-bold">15+ Years</p>
-<p class="text-xs text-slate-500 uppercase tracking-widest">Experience</p>
-</div>
-</div>
-<div class="h-10 w-px bg-slate-800 hidden md:block"></div>
-<div class="flex items-center gap-4 group">
-<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
-<span class="material-symbols-outlined">engineering</span>
-</div>
-<div>
-<p class="text-2xl font-bold">Certified Master</p>
-<p class="text-xs text-slate-500 uppercase tracking-widest">Technicians</p>
-</div>
-</div>
-<div class="h-10 w-px bg-slate-800 hidden md:block"></div>
-<div class="flex items-center gap-4 group">
-<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
-<span class="material-symbols-outlined">stars</span>
-</div>
-<div>
-<p class="text-2xl font-bold">5-Star Rated</p>
-<p class="text-xs text-slate-500 uppercase tracking-widest">Professional Service</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Core Services Grid -->
-<section class="py-24 px-6 max-w-7xl mx-auto w-full">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-<div class="max-w-xl">
-<h3 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 italic">Core Services</h3>
-<h2 class="text-4xl md:text-5xl font-bold leading-tight">Superior Maintenance for High-Performance Vehicles</h2>
-</div>
-<button class="text-primary font-bold flex items-center gap-2 group">
-                    Explore all services 
-                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</button>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Card 1 -->
-<div class="group relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute -right-4 -top-4 size-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
-<span class="material-symbols-outlined text-4xl text-primary mb-6">settings_suggest</span>
-<h4 class="text-xl font-bold mb-3">Full Diagnostics &amp; Tuning</h4>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">ECU remapping and deep system scans using OEM-grade diagnostic tools.</p>
-<div class="aspect-video w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-<img alt="Service" class="w-full h-full object-cover" data-alt="High tech car engine diagnostic interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6zMblYpI9Lp0Fg_PQpp8W-tJAewmm2EfMm_qGPqgJVTMEhjC8GglgmRvcYNlX0bWFVKZ-nv_QQkiN8K3E5dwM3pVzBCUnmQOWFWVSOpKQegUWyU93aFrxPUxtCsaOJ25rVrjehpeKE-ZQC5WEGQsj8vo2d46Gyj3ypp047s3s1SIK00H8C-vZShV726a7GCk3EsAN2k79oSGbE3x56yt9yqlMncqjxf0MF1dpQ01yh8zCM0gFxkWPjgA9kovWBcVA5HH8TOcqyk4"/>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="group relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute -right-4 -top-4 size-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
-<span class="material-symbols-outlined text-4xl text-primary mb-6">speed</span>
-<h4 class="text-xl font-bold mb-3">Performance Upgrades</h4>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">Custom intake, exhaust, and suspension tuning for ultimate track readiness.</p>
-<div class="aspect-video w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-<img alt="Service" class="w-full h-full object-cover" data-alt="Brembo performance brake kit on a luxury car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0kuDQxIZdJL0NauF-qmnYJy3l2jZIUG_ovwzMuK8HVJ0NdOSC1VKUKU9EiBgEHRU--6wf4CbrwIw55aM7W0jc7Cob6gsBIlgLjA-blvc6cTzTPHg70ndVRZq-xpXwSdQBFiYPuwVOIrILLUqs0ypYfq6cQNAOA8s02d-j0BwSaQ8WtooRy-OYrBcQ6lcVVfIOYSwqtaTJHAuU4620Z-larCv3CcP6FQDsuoo_qKl80JsdqPTPvzw-QsoHPc3_16vcSxX4y4zbUtw"/>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="group relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute -right-4 -top-4 size-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
-<span class="material-symbols-outlined text-4xl text-primary mb-6">oil_barrel</span>
-<h4 class="text-xl font-bold mb-3">Routine Maintenance</h4>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">Synthetic fluid changes and multi-point inspections for peak longevity.</p>
-<div class="aspect-video w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-<img alt="Service" class="w-full h-full object-cover" data-alt="Technician pouring high quality motor oil into an engine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqGTadCljmO588PUm04Fky7J3Rgq7IF8YjCczEtDhcvoVBhplOjqFnZWmco5Boq0GIvN_tdRQs7yESy-f39ritg5tmC84Q9BrkWCXyxqfD7Opa-sXAMrhOvtH-nYnJtJnkYTEAw97x9-WpNW3vj9cJ2X4pNYZiM0e5yO-MkK5C9-UYfBabcltAWrDI0drjkakqSlHR8Tlh4shNAmXSH-VSD1sn2MMh3my45nNPhPHqYQCt9_1lVNbIpbgpWWJjPeCQF1S9ppBAA3k"/>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="group relative overflow-hidden rounded-xl bg-slate-900 border border-slate-800 p-8 hover:border-primary/50 transition-all duration-300">
-<div class="absolute -right-4 -top-4 size-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all"></div>
-<span class="material-symbols-outlined text-4xl text-primary mb-6">auto_fix_high</span>
-<h4 class="text-xl font-bold mb-3">Bodywork &amp; Detailing</h4>
-<p class="text-slate-400 text-sm leading-relaxed mb-6">Ceramic coating and precision body repair to restore factory finish.</p>
-<div class="aspect-video w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-<img alt="Service" class="w-full h-full object-cover" data-alt="Professional detailing of a luxury car body" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOOx816_I_f7DHr9s4ykpvYxPLDo4XRf7l0lbqZfNJKavKvpbHXW6A6a0aTtHhQqDav68Re-X1Om6lR76LL504e7dU6hlLJImOxM7pbp_x-nQ8pWJh73lAV2nWvN77RhFtMAsdGxeLW0QXs2qgVuEHz8MGDtaR7C5ILBi5ALiBloSwba6h4x962h6Jm-cQY7xMNUL-NjjoPSNHhoyakchCCXDoH7AT9___L4x-zmAJnVu4j0YgN8r5SYfBxLkzB7u_5WAXz6i0xU4"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Why Us Section -->
-<section class="py-24 bg-slate-custom/30">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="relative group">
-<div class="absolute -inset-4 bg-primary/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<img alt="Why Us" class="relative rounded-xl w-full h-[500px] object-cover" data-alt="Professional technician with a tablet performing diagnostics on a modern car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv_9bc2ZHpe4AgEYaZ7SCsKJWV7Wg6rpo6Zgl_gMnVdgx1Po_R4DhnalLfwTWawzYqNB6tqf-dp3J9PAqSdhvSNEssj_T2HdhvGWtZHwcSY-jCTg3rojpaRb2GR4agqXE3WLvmwZBx2GRFAwWXbb3lHdacgqBtYyEg2iykEEjaNFg-K8boVIA_5f5bnojErOX7i8MfL6qNqVLI48UirMvjujAMBXDx62E2v6h911fP7RZWZ79jS4hvn9h9BpYsc9NCibpmBcAkmfE"/>
-</div>
-<div>
-<h3 class="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">Why Choose Us</h3>
-<h2 class="text-4xl font-bold mb-8">The Gold Standard in Automotive Care</h2>
-<div class="space-y-8">
-<div class="flex gap-6">
-<div class="size-12 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-<span class="material-symbols-outlined text-primary">payments</span>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-1">Transparent Pricing</h4>
-<p class="text-slate-400">Detailed digital estimates sent directly to your phone. No hidden fees or surprise charges.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="size-12 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-<span class="material-symbols-outlined text-primary">inventory_2</span>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-1">Original OEM Parts</h4>
-<p class="text-slate-400">We only use factory-original parts or superior performance components from certified brands.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="size-12 rounded-lg bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-<span class="material-symbols-outlined text-primary">timer</span>
-</div>
-<div>
-<h4 class="text-lg font-bold mb-1">Same-Day Turnaround</h4>
-<p class="text-slate-400">Efficiency without compromise. Most routine services are completed within the same business day.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials -->
-<section class="py-24 px-6 max-w-7xl mx-auto w-full overflow-hidden">
-<h2 class="text-3xl font-bold text-center mb-16">Client Experiences</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Testimonial 1 -->
-<div class="p-8 rounded-xl bg-slate-900 border border-slate-800 flex flex-col">
-<div class="flex gap-1 text-primary mb-6">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="text-slate-300 italic mb-8 flex-grow">"The only place I trust with my Porsche. Their attention to detail on the engine tuning was incredible. Performance has never been better."</p>
-<div class="flex items-center gap-4">
-<div class="size-12 rounded-full bg-slate-800" data-alt="User avatar profile picture placeholder"></div>
-<div>
-<p class="font-bold">Julian V.</p>
-<p class="text-xs text-slate-500">911 GT3 Owner</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="p-8 rounded-xl bg-slate-900 border border-slate-800 flex flex-col">
-<div class="flex gap-1 text-primary mb-6">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="text-slate-300 italic mb-8 flex-grow">"Transparent and professional. They explained everything using the diagnostic tablet. No guessing games, just solid engineering."</p>
-<div class="flex items-center gap-4">
-<div class="size-12 rounded-full bg-slate-800" data-alt="User avatar profile picture placeholder"></div>
-<div>
-<p class="font-bold">Sarah M.</p>
-<p class="text-xs text-slate-500">RS6 Avant Owner</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="p-8 rounded-xl bg-slate-900 border border-slate-800 flex flex-col">
-<div class="flex gap-1 text-primary mb-6">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="text-slate-300 italic mb-8 flex-grow">"The body detailing and ceramic coating service is world-class. My car looks better than the day it left the showroom."</p>
-<div class="flex items-center gap-4">
-<div class="size-12 rounded-full bg-slate-800" data-alt="User avatar profile picture placeholder"></div>
-<div>
-<p class="font-bold">David K.</p>
-<p class="text-xs text-slate-500">M5 Competition Owner</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer / Booking -->
-<footer class="bg-charcoal-custom border-t border-slate-800 pt-20 pb-10">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-<div>
-<h2 class="text-3xl font-bold mb-6">Schedule Your Visit</h2>
-<p class="text-slate-400 mb-10 max-w-md">Our master technicians are ready to optimize your machine. Fill out the form or find us on the map.</p>
-<form class="space-y-4">
-<div class="grid grid-cols-2 gap-4">
-<input class="bg-slate-900 border-slate-800 rounded-lg p-4 text-white focus:ring-primary focus:border-primary" placeholder="Full Name" type="text"/>
-<input class="bg-slate-900 border-slate-800 rounded-lg p-4 text-white focus:ring-primary focus:border-primary" placeholder="Email" type="email"/>
-</div>
-<input class="w-full bg-slate-900 border-slate-800 rounded-lg p-4 text-white focus:ring-primary focus:border-primary" placeholder="Vehicle Model &amp; Year" type="text"/>
-<textarea class="w-full bg-slate-900 border-slate-800 rounded-lg p-4 text-white focus:ring-primary focus:border-primary" placeholder="Tell us about the service needed" rows="4"></textarea>
-<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg transition-all">
-                                Request Appointment
+<button class="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all backdrop-blur-sm">
+                                View Services
                             </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-charcoal">
+<div class="mx-auto max-w-7xl px-6 lg:px-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<p class="text-primary font-bold uppercase tracking-widest text-sm mb-3">Our Expertise</p>
+<h2 class="text-3xl lg:text-4xl font-bold text-white">Advanced Maintenance Solutions</h2>
+</div>
+<p class="text-slate-400 max-w-sm">Specialized performance tuning and maintenance for high-end European and exotic vehicles.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="glass-card group p-8 rounded-xl hover:border-primary/50 transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">settings_suggest</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Engine Tuning</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Stage 1-3 performance mapping and ECU optimization for peak horsepower gains.</p>
+</div>
+<div class="glass-card group p-8 rounded-xl hover:border-primary/50 transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">minor_crash</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Brake Service</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Ceramic pad installation and precision rotor surfacing for ultimate stopping power.</p>
+</div>
+<div class="glass-card group p-8 rounded-xl hover:border-primary/50 transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">biotech</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Diagnostics</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Manufacturer-level scanning and electrical system architecture analysis.</p>
+</div>
+<div class="glass-card group p-8 rounded-xl hover:border-primary/50 transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">architecture</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Suspension</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Coilover setup, air suspension calibration, and laser-guided alignment.</p>
+</div>
+<div class="glass-card group p-8 rounded-xl hover:border-primary/50 transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">rebase_edit</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Transmission</h3>
+<p class="text-slate-400 text-sm leading-relaxed">Dual-clutch service and heavy-duty drivetrain reinforcement.</p>
+</div>
+<div class="glass-card group p-8 rounded-xl hover:border-primary/50 transition-all duration-300 cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">battery_charging_full</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2">Battery</h3>
+<p class="text-slate-400 text-sm leading-relaxed">High-performance AGM battery replacement and EV system health checks.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 lg:grid-cols-2">
+<div class="relative h-[500px] lg:h-auto overflow-hidden">
+<img alt="Mechanic with tablet" class="absolute inset-0 h-full w-full object-cover" data-alt="Professional mechanic using tablet for diagnostic data analysis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIkKFvLHapMiU2u6jP3XSyZV5sF82Zfe5UNhfTmJxjIajN0oEeczPvs1vMrJwHy40eQO4etFWnH8PeKZD_SNW8pXBAi2i9mjaB66umboEKk12nTWZJ8278xHg3YN36e7CR_4CSmyBMZYpjGw4L6owQaZjW4X5TMFVF8mL2PR4a5RnJkdYRnvD2YeEBqllvaH31I8Jc25MG8-U53qUwdG316GogxroxwU_4LmXwGlSgRgQrpqTJXpcvKL3lYToQlBWnVnGI9Ebitx4"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="bg-background-dark py-20 px-8 lg:px-20 flex flex-col justify-center">
+<p class="text-primary font-bold uppercase tracking-widest text-sm mb-3">Superior Standards</p>
+<h2 class="text-4xl font-bold text-white mb-8">Why JIYAN MARUTI MOTOR WORKS Stands Alone</h2>
+<ul class="space-y-8">
+<li class="flex items-start gap-5">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-metallic/30 text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white">Certified Experts</h4>
+<p class="text-slate-400 mt-1 leading-relaxed">Our technicians hold Master Certifications for Porsche, BMW, and Audi platforms.</p>
+</div>
+</li>
+<li class="flex items-start gap-5">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-metallic/30 text-primary">
+<span class="material-symbols-outlined">handyman</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white">Genuine Parts</h4>
+<p class="text-slate-400 mt-1 leading-relaxed">We exclusively use OEM components to ensure your factory warranty remains intact.</p>
+</div>
+</li>
+<li class="flex items-start gap-5">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-metallic/30 text-primary">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white">State-of-the-art Equipment</h4>
+<p class="text-slate-400 mt-1 leading-relaxed">Investment in the latest robotic alignment and laser diagnostic tools.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="py-24 bg-charcoal border-t border-white/5">
+<div class="mx-auto max-w-4xl px-6">
+<div class="text-center mb-12">
+<h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Schedule Your Service</h2>
+<p class="text-slate-400">Book your appointment online and receive a detailed digital health report.</p>
+</div>
+<form class="glass-card p-8 lg:p-12 rounded-2xl shadow-2xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300 ml-1">Full Name</label>
+<input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300 ml-1">Email Address</label>
+<input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300 ml-1">Car Model</label>
+<input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" placeholder="e.g. Porsche 911 GT3" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300 ml-1">Service Type</label>
+<select class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4">
+<option>Engine Tuning</option>
+<option>Brake Service</option>
+<option>Diagnostics</option>
+<option>Regular Maintenance</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-orange-600 text-white py-4 rounded-lg font-bold text-lg transition-all shadow-xl shadow-primary/20" type="submit">
+                            Confirm Booking Request
+                        </button>
+<p class="text-center text-xs text-slate-500 mt-6">
+                            By clicking, you agree to our Terms of Service and Privacy Policy.
+                        </p>
 </form>
 </div>
-<div class="flex flex-col h-full">
-<div class="bg-slate-900 rounded-xl overflow-hidden flex-grow border border-slate-800 min-h-[300px]">
-<img alt="Map View" class="w-full h-full object-cover opacity-50 grayscale" data-location="Stuttgart, Germany" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxaz4zaOfJVTHI6H_on07IfiuzzPllnLJNCRO7mtlJ_19DubC0TqTmuc0JRaVxFW2rzwdPErRTsbcwy5hKOxEDnDLDcSg4ioj1SnYiZH1S1NNleLU8lfPgyV3c3trLm_ChpqQ7VwcjwsA6vrqDg6AgpQ1CDDaV7-EougP308MejDzSccg2CfjG5r16Dpt9-PIr03ttOtdvleqSYQBVIaYUF5rGhk22xxp_aTFfCkJdxreLhh7x073C7H0aA9leefWdgwpXIvjCudc"/>
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="bg-background-dark/90 p-6 rounded-lg border border-slate-800 text-center shadow-2xl">
-<span class="material-symbols-outlined text-primary text-4xl mb-2">location_on</span>
-<p class="font-bold">Automotive Excellence Square</p>
-<p class="text-sm text-slate-400">Block 12, Precision Way, Tech City</p>
+</section>
+</main>
+<footer class="bg-background-dark py-12 border-t border-white/5 px-6 lg:px-20">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-xl">precision_manufacturing</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight text-white uppercase">JIYAN MARUTI MOTOR WORKS</h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                            Redefining automotive luxury care through engineering excellence and obsessive attention to detail.
+                        </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Navigation</h4>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Technicians</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Warranty</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Connect</h4>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Facebook</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">YouTube</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Locate Us</h4>
+<p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                            1200 Performance Way<br/>
+                            Automotive District, CA 90210
+                        </p>
+<div class="h-32 w-full rounded-lg overflow-hidden grayscale opacity-60">
+<img alt="Location Map" class="h-full w-full object-cover" data-location="Los Angeles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgyjGjJsIUoWMVbkFfySf2RcAz4ecl-wpQtfMmAw726eRGowHMOlkwe8S-NlkwlUYj9yb2j4vbOgyALQ8tXXdsD789Vbk2iJCut13euNIp4mreJmzFSxDOZA8B209-DSLJpc3N_JyxUcj2YnlcTHnrUnj9OHt0OmtSmMfR8WsV985nl41gy_q7QUfA889KNsm2GD7-nfIRQsSusYfOkizy_ylkXvFJngIzrvHaQUouphmwKRcdMjyAgOrP6LsHg5ClxbMY0iuMgq8"/>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-slate-800 pt-10">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-2xl">precision_manufacturing</span>
-<span class="font-bold tracking-tight">JIYAN MARUTI MOTOR WORKS</span>
-</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-4">
+<p class="text-xs text-slate-500">© 2024 JIYAN MARUTI MOTOR WORKS. All rights reserved.</p>
 <div class="flex gap-6">
-<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-xl">share</span>
-</a>
-<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-xl">camera</span>
-</a>
-<a class="size-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-xl">chat</span>
-</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-white transition-colors" href="#">Terms of Service</a>
 </div>
-<p class="text-sm text-slate-500"> 2024 Jiyan Maruti. All rights reserved.</p>
 </div>
 </div>
 </footer>
-</div>
 
-<!-- Additional Images Section -->
-<div class="py-12 px-6 bg-slate-900 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto">
-        <h3 class="text-2xl font-bold text-center mb-8 text-white">Gallery</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="rounded-lg overflow-hidden">
-                <img src="IMG-20260307-WA0021.jpg" alt="Gallery Image 1" class="w-full h-auto object-cover">
+<!-- Booking Modal -->
+<div id="bookingModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+    <div class="bg-background-dark border border-white/10 rounded-2xl shadow-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto">
+        <div class="p-6 lg:p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-white">Book Your Service</h3>
+                <button onclick="closeBookingModal()" class="text-slate-400 hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
             </div>
-            <div class="rounded-lg overflow-hidden">
-                <img src="IMG-20260307-WA0022.jpg" alt="Gallery Image 2" class="w-full h-auto object-cover">
-            </div>
+            
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-slate-300">Full Name</label>
+                        <input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" placeholder="John Doe" type="text"/>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-slate-300">Email Address</label>
+                        <input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" placeholder="john@example.com" type="email"/>
+                    </div>
+                </div>
+                
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-slate-300">Phone Number</label>
+                    <input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" placeholder="+1 (555) 123-4567" type="tel"/>
+                </div>
+                
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-slate-300">Car Model & Year</label>
+                    <input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" placeholder="e.g. Porsche 911 GT3 2023" type="text"/>
+                </div>
+                
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-slate-300">Service Type</label>
+                    <select class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4 text-slate-900">
+                        <option class="text-slate-900">Engine Tuning</option>
+                        <option class="text-slate-900">Brake Service</option>
+                        <option class="text-slate-900">Diagnostics</option>
+                        <option class="text-slate-900">Regular Maintenance</option>
+                        <option class="text-slate-900">Performance Upgrade</option>
+                        <option class="text-slate-900">Bodywork & Detailing</option>
+                    </select>
+                </div>
+                
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-slate-300">Preferred Date</label>
+                    <input class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary h-12 px-4" type="date"/>
+                </div>
+                
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-slate-300">Additional Notes</label>
+                    <textarea class="w-full rounded-lg bg-white/5 border-white/10 text-white focus:border-primary focus:ring-primary px-4 py-3" placeholder="Tell us about the service needed..." rows="3"></textarea>
+                </div>
+                
+                <div class="flex gap-4 pt-4">
+                    <button type="button" onclick="closeBookingModal()" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-3 rounded-lg font-bold transition-all">
+                        Cancel
+                    </button>
+                    <button type="submit" class="flex-1 bg-primary hover:bg-orange-600 text-white py-3 rounded-lg font-bold transition-all shadow-lg shadow-primary/20">
+                        Confirm Booking
+                    </button>
+                </div>
+                
+                <p class="text-xs text-slate-500 text-center mt-4">
+                    By submitting, you agree to our Terms of Service and Privacy Policy.
+                </p>
+            </form>
         </div>
     </div>
 </div>
 
+</div>
 </body></html>
